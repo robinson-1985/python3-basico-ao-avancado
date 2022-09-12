@@ -88,7 +88,7 @@ for i in d1.items():
 # desempacotar a chave e valor
 
 for m, n in d1.items():
-    print(m, n)'''
+    print(m, n)
 
 clientes = {
     'cliente1': {
@@ -109,3 +109,51 @@ for clientes_k, clientes_v in clientes.items():
     print(f'Exibindo {clientes_k}')
     for dados_k, dados_v in clientes_v.items():
         print(f'\t{dados_k} = {dados_v}')
+
+d1 = {1:'a', 2:'b', 3:'c'}
+v = d1
+
+v[1] = 'Luiz'
+
+print(d1)
+print(v)
+
+v = d1.copy()
+v[1] = 'Luiz'
+
+print(d1)
+print(v)
+
+d1 = {1:'a', 2:'b', 3:'c', 'd': ['Luiz', 'Otávio']}
+v = d1.copy()
+
+v[1] = 'Luiz'
+
+print(v['d'][0])
+
+print(d1)
+print(v)
+
+import copy
+
+d1 = {1:'a', 2:'b', 3:'c', 'd': ['Luiz', 'Otávio']}
+v = copy.deepcopy(d1)
+
+v[1] = 'Luiz'
+
+v['d'][0] = 'Joãozinho'
+
+print(d1)
+print(v)
+
+# convertendo chave em dicionário
+
+lista = [
+    ['c1', 1],
+    ['c2', 2],
+    ['c3', 3],
+]
+
+d1 = dict(lista)
+print(d1)
+print(d1['c3'])'''
