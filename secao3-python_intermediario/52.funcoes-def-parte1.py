@@ -1,4 +1,4 @@
-'''def funcao():
+ '''def funcao():
     print('Hello world!')
 
 
@@ -29,7 +29,6 @@ saudacao('Oi', 'Luiz')
 saudacao('Hello', 'Maria')
 saudacao('Olá', 'Otávio')
 saudacao('Olá', 'João')'''
-
 
 def saudacao(msg='Olá', nome='Usuário'):
     nome = nome.replace('e', '3')  # a letra e vai ser mudada para o número 3
