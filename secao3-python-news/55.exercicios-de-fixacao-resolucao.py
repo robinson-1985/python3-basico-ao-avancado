@@ -36,14 +36,19 @@ descrito, exiba a saudação apropriada. Ex.
 Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23.
 """
 
-horas = float(input('Que horas são: '))
+try:
+    hora = int(entrada)
 
-if horas >= 0 and horas <= 11:
-    print('Bom dia')
-elif horas >= 12 and horas <= 17:
-    print('Boa tarde')
-elif horas >= 18 and horas <= 23:
-    print('Boa noite')
+    if hora >= 0 and hora <= 11:
+        print('Bom dia')
+    elif hora >= 12 and hora <= 17:
+        print('Bom tarde')
+    elif hora >= 18 and hora <= 23:
+        print('Bom noite')
+    else:
+        print('Não conheço essa hora')
+except:
+    print('Por favor, digite apenas números inteiros')
 
 """
 Faça um programa que peça o primeiro nome do usuário. Se o nome tiver 4 letras ou 
@@ -59,3 +64,5 @@ elif len(nome) >= 5 and len(nome) <= 6:
     print('Seu nome é normal')
 elif len(nome) > 6:
     print('Seu nome é muito grande')
+else:
+    print('Digite mais de uma letra!')
